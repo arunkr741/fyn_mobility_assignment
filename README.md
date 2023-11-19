@@ -1,7 +1,5 @@
 # Pricing Module
 
-Brief project description.
-
 ## Table of Contents
 
 - [Installation](#installation)
