@@ -144,8 +144,11 @@ function calculatePrice() {
     })
     .then(response => response.json())
     .then(data => {
-        // Display the result
-        document.getElementById("total-price").innerHTML = `<h2 class="m-t-20">Total Price: ${data.price}</h2>`
+        if(data.error){
+          document.getElementById("total-price").innerHTML = `<h2 class="m-t-20">${data.error}</h2>`
+        }else{
+            document.getElementById("total-price").innerHTML = `<h2 class="m-t-20">Total Price: ${data.price}</h2>`
+        }
     })
     .catch(error => {
         console.error('Error:', error);
